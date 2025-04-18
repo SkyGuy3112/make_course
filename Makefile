@@ -59,3 +59,11 @@ Target3:
 	@echo "gcc dummy use"
 	gcc
 
+#phony target example (unreal target)
+
+clean:
+	@echo "cleaning up"
+	rm -f *.o *.exe
+	@echo "done"
+
+.PHONY: clean #some other phony target, .PHONY can take multiple targets
