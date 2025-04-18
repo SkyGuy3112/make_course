@@ -46,3 +46,16 @@
 # --------------
 # Run `make` to execute the default target.
 # Run `make <target>` to execute a specific target.
+
+#example
+Target: dependencies
+	@echo "use dependencies to build target, dependencies can be other targets, like this:"
+
+dependencies: Target3
+	@echo "use Target3 to build Target2, Target3 can be another target, like this:"
+
+Target3:	
+#some command(but tabs before that)
+	@echo "gcc dummy use"
+	gcc
+
